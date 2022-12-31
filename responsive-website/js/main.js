@@ -1,5 +1,6 @@
 $(document).ready(function () {
     var $smooth = $('a[href^="#"]');
+    var swiper;
     $smooth.on('click', function () {
         var speed = 1000;
         var href = $(this).attr("href");
@@ -81,7 +82,8 @@ $(document).ready(function () {
                 $('.swiper-wrapper').append('<div class="swiper-slide"><img src="./img/' + item + '" alt=""></div>')
             });
         }
-        var swiper = new Swiper(".mySwiper", {
+        if (swiper) { swiper.destroy() }
+        swiper = new Swiper(".mySwiper", {
             navigation: {
                 nextEl: ".btn-popup.next",
                 prevEl: ".btn-popup.prev",
@@ -90,6 +92,7 @@ $(document).ready(function () {
                 el: ".swiper-pagination",
             },
         });
+        swiper.init()
         $('#popup').fadeIn();
 
     })
