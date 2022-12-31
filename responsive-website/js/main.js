@@ -24,8 +24,8 @@ $(document).ready(function () {
 
     var player;
     var videoId = youtubeEmbedElement.dataset.videoId;
-    var startSeconds = 20;
-    var endSeconds = 114;
+    var startSeconds = 8;
+    var endSeconds = 51;
 
     onYouTubeIframeAPIReady = function () {
         player = new YT.Player("video-player", {
@@ -39,8 +39,9 @@ $(document).ready(function () {
                 modestbranding: 1,
                 loop: 1,
                 fs: 0,
-                rel: 0,
+                // rel: 0,
                 enablejsapi: 1,
+                iv_load_policy: 3,
                 start: startSeconds,
                 end: endSeconds
             },
@@ -49,7 +50,6 @@ $(document).ready(function () {
                     e.target.mute();
                 },
                 onStateChange: function (e) {
-
                     if (e.data === YT.PlayerState.ENDED) {
                         player.seekTo(startSeconds);
                     }

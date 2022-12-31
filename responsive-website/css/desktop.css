@@ -57,11 +57,9 @@ body {
           transform: translate(-50%, -50%);
   z-index: 0;
   width: 100vw;
-  height: 61.875vw;
-  /* 9/16*100 = 56.25 */
+  height: 100vw;
   min-height: 100vh;
-  min-width: 195.55vh;
-  /* 16/9*100 = 177.77 */
+  min-width: 235vh;
   opacity: 0;
   -webkit-transition: opacity 2s;
   transition: opacity 2s;
@@ -404,7 +402,6 @@ body {
 
 .section-popup .popup-content {
   width: 1000px;
-  min-height: 80vh;
   position: relative;
   margin: 0 auto;
   top: 50%;
@@ -429,10 +426,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: rgba(97, 97, 97, 0.2);
 }
 
 .section-popup .popup-content .btn-popup:hover {
-  background-color: rgba(97, 97, 97, 0.3);
+  background-color: rgba(97, 97, 97, 0.4);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
