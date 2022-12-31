@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+#animation {
+  width: 100vw;
+  height: 100vh;
+}
+svg {
+  margin-top: 200px;
+  margin-left: 50px;
+  height: 70vh;
+  min-width: 500px;
+}
+.path {
+  fill: none;
+  stroke: black;
+  stroke-width: 1;
+}
+
+#character {
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/d-left-right-1.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  animation: run 0.5s ease-in-out infinite;
+  animation-play-state: paused;
+}
+.run {
+  animation-play-state: running !important;
+}
+
+@keyframes run {
+  0%,
+  100% {
+    background-image: url("../img/d-left-right-1.png");
+  }
+  12.5% {
+    background-image: url("../img/d-left-right-2.png");
+  }
+  25% {
+    background-image: url("../img/d-left-right-3.png");
+  }
+  37.5% {
+    background-image: url("../img/d-left-right-4.png");
+  }
+  50% {
+    background-image: url("../img/d-left-right-5.png");
+  }
+  62.5% {
+    background-image: url("../img/d-left-right-6.png");
+  }
+  75% {
+    background-image: url("../img/d-left-right-7.png");
+  }
+  87.5% {
+    background-image: url("../img/d-left-right-8.png");
+  }
+}

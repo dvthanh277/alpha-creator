@@ -1,0 +1,12 @@
+{
+  "liveServer.settings.port": 5501,
+  "liveSassCompile.settings.excludeList": ["**/node_modules/**", ".vscode/**"],
+  "liveSassCompile.settings.includeItems": ["/responsive-website/css/**"],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/responsive-website/css"
+    }
+  ]
+}
